@@ -2,7 +2,7 @@ Summary:	Online help viewer for GNUstep
 Summary(pl):	Przegl±darka pomocy online dla GNUstepa
 Name:		HelpViewer
 Version:	0.3
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Applications
 Source0:	http://www.roard.com/helpviewer/download/%{name}-%{version}.tgz
@@ -11,7 +11,7 @@ URL:		http://www.roard.com/helpviewer/
 BuildRequires:	gnustep-gui-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define         _prefix         /usr/lib/GNUstep
+%define         _prefix         /usr/%{_lib}/GNUstep
 
 %define		libcombo	gnu-gnu-gnu
 %define		gsos		linux-gnu
@@ -19,11 +19,10 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		gscpu		ix86
 %else
 # also s/alpha.*/alpha/, but we use only "alpha" arch for now
-%define		gscpu		%{_target_cpu}
+%define		gscpu		%(echo %{_target_cpu} | sed -e 's/amd64/x86_64/;s/ppc/powerpc/')
 %endif
 
 %define		gstriple	%{gscpu}/%{gsos}/%{libcombo}
-%define		gsservicedir	%{_prefix}/System/Library/Services
 
 %description
 HelpViewer is an online help viewer for GNUstep programs.
@@ -33,8 +32,6 @@ HelpViewer to przegl±darka pomocy online dla programów z GNUstepa.
 
 %prep
 %setup -q
-
-#find . -type d -name CVS | xargs rm -rf
 
 %build
 . %{_prefix}/System/Library/Makefiles/GNUstep.sh
