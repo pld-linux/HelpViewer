@@ -2,7 +2,7 @@ Summary:	Online help viewer for GNUstep
 Summary(pl):	Przegl±darka pomocy online dla GNUstepa
 Name:		HelpViewer
 Version:	0.3
-Release:	2
+Release:	3
 License:	GPL
 Group:		X11/Applications
 Source0:	http://www.roard.com/helpviewer/download/%{name}-%{version}.tgz
