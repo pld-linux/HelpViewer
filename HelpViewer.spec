@@ -1,5 +1,5 @@
 Summary:	Online help viewer for GNUstep
-Summary(pl):	Przegl±darka pomocy online dla GNUstepa
+Summary(pl.UTF-8):   PrzeglÄ…darka pomocy online dla GNUstepa
 Name:		HelpViewer
 Version:	0.3
 Release:	4
@@ -27,8 +27,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 HelpViewer is an online help viewer for GNUstep programs.
 
-%description -l pl
-HelpViewer to przegl±darka pomocy online dla programów z GNUstepa.
+%description -l pl.UTF-8
+HelpViewer to przeglÄ…darka pomocy online dla programÃ³w z GNUstepa.
 
 %prep
 %setup -q
