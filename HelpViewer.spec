@@ -1,5 +1,5 @@
 Summary:	Online help viewer for GNUstep
-Summary(pl.UTF-8):   Przeglądarka pomocy online dla GNUstepa
+Summary(pl.UTF-8):	Przeglądarka pomocy online dla GNUstepa
 Name:		HelpViewer
 Version:	0.3
 Release:	4
